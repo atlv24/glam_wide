@@ -38,11 +38,6 @@ macro_rules! wide_vec3_swizzles {
             }
 
             #[inline]
-            fn with_xy(self, rhs: $v2t) -> Self {
-                Self::new(rhs.x, rhs.y, self.z)
-            }
-
-            #[inline]
             fn xz(self) -> $v2t {
                 $v2t {
                     x: self.x,
@@ -51,21 +46,11 @@ macro_rules! wide_vec3_swizzles {
             }
 
             #[inline]
-            fn with_xz(self, rhs: $v2t) -> Self {
-                Self::new(rhs.x, self.y, rhs.y)
-            }
-
-            #[inline]
             fn yx(self) -> $v2t {
                 $v2t {
                     x: self.y,
                     y: self.x,
                 }
-            }
-
-            #[inline]
-            fn with_yx(self, rhs: $v2t) -> Self {
-                Self::new(rhs.y, rhs.x, self.z)
             }
 
             #[inline]
@@ -85,11 +70,6 @@ macro_rules! wide_vec3_swizzles {
             }
 
             #[inline]
-            fn with_yz(self, rhs: $v2t) -> Self {
-                Self::new(self.x, rhs.x, rhs.y)
-            }
-
-            #[inline]
             fn zx(self) -> $v2t {
                 $v2t {
                     x: self.z,
@@ -98,21 +78,11 @@ macro_rules! wide_vec3_swizzles {
             }
 
             #[inline]
-            fn with_zx(self, rhs: $v2t) -> Self {
-                Self::new(rhs.y, self.y, rhs.x)
-            }
-
-            #[inline]
             fn zy(self) -> $v2t {
                 $v2t {
                     x: self.z,
                     y: self.y,
                 }
-            }
-
-            #[inline]
-            fn with_zy(self, rhs: $v2t) -> Self {
-                Self::new(self.x, rhs.y, rhs.x)
             }
 
             #[inline]
